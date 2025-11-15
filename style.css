@@ -95,7 +95,7 @@ header{
 }
 
 .introduction{
-    padding-top: clamp(100px, 35vw, 270px);
+    padding-top: clamp(100px, 13%, 270px);
     width: clamp(400px, 50%, 100%);
     height: auto;
 }
@@ -140,7 +140,7 @@ header{
 }
 
 .portrait{
-    padding-top: clamp(50px, 14.7%, 270px);
+    padding-top: clamp(50px, 13%, 270px);
     width: clamp(400px, 50%, 100%);
     height: auto;
     align-self: stretch;
@@ -177,7 +177,6 @@ header{
 }
 .skills svg:hover{
     transform: scale(1.2);
-    
 }
 
 main{
@@ -196,8 +195,8 @@ article{
     margin: 0px var(--left-margin);
 }
 .article-img-container{
-    width: clamp(333px, 50%, 800px);
-    height: clamp(333px, 50%, 800px);
+    width: clamp(333px, 40%, 800px);
+    height: clamp(333px, 40%, 800px);
     margin-bottom: 30px;
     order: 1;
 }
@@ -206,6 +205,11 @@ article{
     width: 100%;
     border: none 2px solid;
     border-radius: 25px;
+    transition: 0.2s all ease-in-out;
+}
+.article-img-container img:hover{
+    transform: scale(1.05);
+    box-shadow: var(--color-5) 0 0 20px;
 }
 .article-content{
     height: auto;
