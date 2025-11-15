@@ -19,12 +19,14 @@ body::selection{
     --default-color: white;
     --theme-color: #00d0ff;
     --bg-color-1: #0f0f0f;
-    --bg-color-2: #242424;
-    --bg-color-3: #2d2d2d;
+    --bg-color-2: #1a2a2d;
+    --bg-color-3: #323131;
 }
 /* Highlighted text */
 .highlight{
     color: var(--theme-color);
+    text-shadow: var(--theme-color) 0 0 10px;
+    font-weight: 400;
 }
 .highlight::selection{
     color: black;
@@ -78,6 +80,18 @@ nav img{
 nav img:hover{
     transform: scale(1.2);
 }
+.nav-buttons{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.nav-buttons span{
+    font-size: 2rem;
+    text-decoration: none;
+    color: var(--default-color);
+    margin-right: 25px;
+    font-family: "Roboto";
+}
 .nav-buttons a{
     font-size: 2rem;
     text-decoration: none;
@@ -130,6 +144,7 @@ nav img:hover{
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
     height: 100vh;
     width: 100%;
 }
@@ -179,6 +194,8 @@ main{
     flex-direction: column;
     gap: 10px;
     margin-bottom: 30px;
+    border-left: var(--theme-color) 7px solid;
+    padding-left: 5px;
 }
 .main-left-1{
     font-size: 2rem;
@@ -191,7 +208,7 @@ main{
     .main-left-1 p{
         display: block;
         min-width: fit-content;
-        padding: 10px 20px;
+        padding: 10px 15px 10px 5px;
         margin: 0px;
         background-color: var(--bg-color-3);
         border-radius: 7px;
@@ -241,6 +258,8 @@ main{
     gap: 10px;
     margin-bottom: 30px;
     margin-left: 35px;
+    border-left: var(--theme-color) 5px solid;
+    padding-left: 7px;
 }
 .main-right-1{
     font-size: 2rem;
@@ -262,6 +281,7 @@ main{
     }
     .main-left{
         align-items: center;
+        border: none;
     }
     .main-middle{
         height: auto;
