@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <link rel="icon" href="sources/images/top/portrait.png" type="image/png">
+    <link rel="icon" href="sources/images/other/favicon.ico" type="image/x-icon">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <title>Homepage</title>
 </head>
@@ -26,7 +26,7 @@
     </div>
     <section class="top">
         <nav>
-            <a data-aos="fade-right" data-aos-delay="300" href="index.html"><img src="sources/images/navbar/Logo.png" alt="Logo"></a>
+            <a data-aos="fade-right" data-aos-delay="300" href="index.html"><img src="sources/images/navbar/Logo.webp" alt="Logo"></a>
             <div data-aos="fade-in" data-aos-delay="500" class="nav-buttons" id="hidden-mobile">
                 <a class="nav-buttons-main" href="#">Home</a><a>│</a>
                 <a href="#">FAQ</a><a>│</a>
@@ -34,7 +34,7 @@
                 <a href="#">FAQ</a><a>│</a>
                 <a href="#">FAQ</a>
             </div>
-            <a id="hidden-mobile" data-aos="fade-left" data-aos-delay="700" href="#" class="nav-learnmore">Learn more</a>
+            <div data-aos="fade-left" data-aos-delay="700"><a class="nav-learnmore" id="hidden-mobile" href="#">Learn more</a></div>
             <button onclick="switch_secret_navbar()" class="nav-menu-button" data-aos="fade-left" data-aos-delay="500" id="shown-mobile">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
                     <g>
@@ -78,8 +78,8 @@
 <script src="script.js"></script>
 <script>
 AOS.init({
-    duration: "700",
-    once: "true",
+    duration: 700,
+    once: true,
 });
 </script>
 </body>
