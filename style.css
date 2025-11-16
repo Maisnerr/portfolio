@@ -10,6 +10,7 @@ html, body {
     background-position: center;
     background-size: 100% 100%;
     overflow-x: hidden;
+    scroll-behavior: smooth;
 }
 body::selection{
     color: black;
@@ -31,6 +32,13 @@ body::selection{
 .highlight::selection{
     color: black;
     background-color: var(--theme-color);
+}
+.highlighted{
+    color: var(--theme-color);
+    text-shadow: var(--theme-color) 0 0 10px;
+    font-weight: 400;
+    font-size: 3rem;
+    text-align: center;
 }
 /* Elements hidden/shown when on mobile */
 @media (max-width: 768px) {
@@ -255,8 +263,7 @@ main{
     display: flex;
     flex-direction: column;
     gap: 10px;
-    margin-bottom: 30px;
-    margin-left: 35px;
+    margin: 0px 30px 35px 30px;
     border-left: var(--theme-color) 5px solid;
     padding-left: 7px;
 }
@@ -302,4 +309,15 @@ main{
     background-color: var(--theme-color);
     border: none;
     margin: 0px;
+}
+
+/* Footer */
+footer{
+    height: 50%;
+    background-color: #252525;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
 }
