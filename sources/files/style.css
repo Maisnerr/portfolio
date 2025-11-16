@@ -9,7 +9,6 @@ html, body {
     background-attachment: fixed;
     background-position: center;
     background-size: 100% 100%;
-    overflow-x: hidden;
     scroll-behavior: smooth;
 }
 body::selection{
@@ -60,17 +59,17 @@ body::selection{
 /* Fonts for Light,Normal,Bold*/
 @font-face {
     font-family: "Roboto";
-    src: url("sources/fonts/Roboto_SemiCondensed-Light.ttf") format("woff2");
+    src: url("../fonts/Roboto_SemiCondensed-Light.ttf") format("woff2");
     font-weight: 100;
 }
 @font-face {
     font-family: "Roboto";
-    src: url("sources/fonts/Roboto_SemiCondensed-Medium.ttf") format("woff2");
+    src: url("../fonts/Roboto_SemiCondensed-Medium.ttf") format("woff2");
     font-weight: 400;
 }
 @font-face {
     font-family: "Roboto";
-    src: url("sources/fonts/Roboto_SemiCondensed-Bold.ttf") format("woff2");
+    src: url("../fonts/Roboto_SemiCondensed-Bold.ttf") format("woff2");
     font-weight: 700;
 }
 
@@ -185,6 +184,7 @@ nav img:hover{
     background-color: transparent;
     border: none;
 }
+
 /* Start of top section */
 .top{
     padding: 2% 4% 0px 4%;
@@ -290,6 +290,9 @@ main{
         text-align: center;
         border: none;
     }
+    .main-left-1 p{
+        padding: 15px;
+    }
     .main-middle{
         height: auto;
         margin-bottom: 25px;
@@ -302,6 +305,79 @@ main{
         margin-left: 0;
     }
 }
+
+/* Project div */
+.project{
+    width: 90%;
+    height: fit-content;
+    display: block;
+    padding: 0 5% 5%;
+}
+.project-header{
+    font-size: 3rem;
+    font-family: "Roboto";
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 0;
+}
+.project-seader{
+    font-size: 1.5rem;
+    font-family: "Roboto";
+    text-align: center;
+    margin: 10px 0 50px;
+}
+.project-container{
+    width: 100%;
+    display: flex !important;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 3%;
+}
+.project-window{
+    border: var(--theme-color) 5px solid;
+    border-radius: 10px;
+    max-width: 330px;
+    transition: 0.2s ease-in-out;
+}
+.project-window:hover{
+    box-shadow: var(--theme-color) 0 0 22px;
+    transform: scale(1.05) translateY(-30px);
+}
+.project-window img{
+    width: 70%;
+    margin: 15%;
+}
+.project-window p{
+    font-size: clamp(1.1rem, 2vw, 1.5rem);
+    font-family: "Roboto";
+    text-align: start;
+    margin: 5%;
+    font-weight: 100;
+}
+.project-window h1{
+    font-size: clamp(1rem, 2vw, 1.5rem);
+    font-family: "Roboto";
+    font-weight: 400;
+    text-align: center;
+    margin-top: 1%;
+}
+/* Mobile fixes*/
+@media (max-width: 768px) {
+    .project-window img{
+        width: 60%;
+        margin: 5% 20% 3% 20%;
+    }
+}
+
+
+
+
+
+
+
+
+
 
 /* <hr> */
 .breaker{

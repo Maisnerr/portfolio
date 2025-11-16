@@ -3,8 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+        <link rel="stylesheet" href="sources/files/style.css">
+
     <link rel="icon" href="sources/images/other/favicon_light.ico" type="image/x-icon" media="(prefers-color-scheme: dark)">
     <link rel="icon" href="sources/images/other/favicon_dark.ico" type="image/x-icon" media="(prefers-color-scheme: light)">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
@@ -14,7 +15,7 @@
     <div data-aos="fade-down" data-aos-once="false" id="secret-navbar" class="nav-menu-darkness" style="visibility: hidden; opacity: 0;">
         <div class="nav-menu">
             <a class="nav-buttons-main" href="#top" onclick="switch_secret_navbar()">Home</a>
-            <a href="#1" onclick="switch_secret_navbar()">FAQ</a>
+            <a href="#project" onclick="switch_secret_navbar()">Služby</a>
             <a href="#2" onclick="switch_secret_navbar()">FAQ</a>
             <a href="#3" onclick="switch_secret_navbar()">FAQ</a>
             <a href="#4" onclick="switch_secret_navbar()">FAQ</a>
@@ -30,12 +31,12 @@
             <a data-aos="fade-right" data-aos-delay="300" href="https://maisnerr.github.io/portfolio"><img src="sources/images/navbar/Logo.webp" alt="Logo"></a>
             <div data-aos="fade-in" data-aos-delay="500" class="nav-buttons" id="hidden-mobile">
                 <a class="nav-buttons-main" href="#top">Home</a><span>│</span>
-                <a href="#1">FAQ 1</a><span>│</span>
+                <a href="#project">Služby</a><span>│</span>
                 <a href="#2">FAQ 2</a><span>│</span>
                 <a href="#3">FAQ 3</a><span>│</span>
                 <a href="#4">FAQ 4</a>
             </div>
-            <div data-aos="fade-left" data-aos-delay="700"><a class="nav-learnmore" id="hidden-mobile" href="#1">Podrobnosti</a></div>
+            <div data-aos="fade-left" data-aos-delay="700"><a class="nav-learnmore" id="hidden-mobile" href="#project">Podrobnosti</a></div>
             <button onclick="switch_secret_navbar()" class="nav-menu-button" data-aos="fade-left" data-aos-delay="500" id="shown-mobile">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
                     <g>
@@ -74,20 +75,69 @@
         </main>
     </section>
     <hr class="breaker">
-    <a href="old/index.html" target="_blank" style="color: white; font-size: 2rem; margin: 20px 20px;">OLD WEB</a>
-    <p id="1" class="highlighted">1</p><p>abc</p><p>abc</p><p>abc</p><p>abc</p><p>abc</p><p>abc</p><p>abc</p><p>abc</p><p>abc</p><p>abc</p><p>abc</p><p>abc</p><p>abc</p>
-    <p>abc</p><p>abc</p><p>abc</p><p>abc</p><p>abc</p><p>abc</p><p>abc</p><p>abc</p><p>abc</p><p>abc</p><p>abc</p><p>abc</p><p>abc</p><p>abc</p>
-    <hr class="breaker">
-    <p id="2" class="highlighted">2</p><p>abc</p><p>abc</p><p>abc</p><p>abc</p><p>abc</p><p>abc</p><p>abc</p><p>abc</p><p>abc</p><p>abc</p><p>abc</p><p>abc</p><p>abc</p>
-    <p>abc</p><p>abc</p><p>abc</p><p>abc</p><p>abc</p><p>abc</p><p>abc</p><p>abc</p><p>abc</p><p>abc</p><p>abc</p><p>abc</p><p>abc</p><p>abc</p>
-    <hr class="breaker">
-    <p id="3" class="highlighted">3</p><p>abc</p><p>abc</p><p>abc</p><p>abc</p><p>abc</p><p>abc</p><p>abc</p><p>abc</p><p>abc</p><p>abc</p><p>abc</p><p>abc</p><p>abc</p>
-    <p>abc</p><p>abc</p><p>abc</p><p>abc</p><p>abc</p><p>abc</p><p>abc</p><p>abc</p><p>abc</p><p>abc</p><p>abc</p><p>abc</p><p>abc</p><p>abc</p>
-    <hr class="breaker">
-    <p id="4" class="highlighted">4</p><p>abc</p><p>abc</p><p>abc</p><p>abc</p><p>abc</p><p>abc</p><p>abc</p><p>abc</p><p>abc</p><p>abc</p><p>abc</p><p>abc</p><p>abc</p>
-    <p>abc</p><p>abc</p><p>abc</p><p>abc</p><p>abc</p><p>abc</p><p>abc</p><p>abc</p><p>abc</p><p>abc</p><p>abc</p><p>abc</p><p>abc</p><p>abc</p>
 
+    <section id="project" class="project">
+        <p class="project-header" data-aos="fade-down">Co vám mohu nabídnout</p>
+        <p class="project-seader" data-aos="fade-down">Každá služba vzniká s důrazem na <span class="highlight">detail</span>, <span class="highlight">nápaditost</span> a <span class="highlight">skutečné výsledky</span>.</p>
+        <div id="hidden-mobile">
+            <div class="project-container">
+                <article data-aos="fade-right" data-aos-duration="1000" data-aos-delay="200">
+                    <div class="project-window">
+                        <img src="sources/images/projects/1.webp" alt="Project number 1 image">
+                        <h1 class="highlight">Lorem ipsum</h1>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
+                    </div>
+                </article>
+                <article data-aos="fade-right" data-aos-duration="1000" data-aos-delay="400">
+                    <div class="project-window">
+                        <img src="sources/images/projects/1.webp" alt="Project number 1 image">
+                        <h1 class="highlight">Lorem ipsum</h1>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
+                    </div>
+                </article>
+                <article data-aos="fade-right" data-aos-duration="1000" data-aos-delay="600">
+                    <div class="project-window">
+                        <img src="sources/images/projects/1.webp" alt="Project number 1 image">
+                        <h1 class="highlight">Lorem ipsum</h1>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
+                    </div>
+                </article>
+                <article data-aos="fade-right" data-aos-duration="1000" data-aos-delay="800">
+                    <div class="project-window">
+                        <img src="sources/images/projects/1.webp" alt="Project number 1 image">
+                        <h1 class="highlight">Lorem ipsum</h1>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
+                    </div>
+                </article>
+            </div>
+        </div>
+
+        <div id="shown-mobile">
+            <article data-aos="fade-right" data-aos-duration="1000" data-aos-delay="800">
+                    <div class="project-window">
+                        <img src="sources/images/projects/1.webp" alt="Project number 1 image">
+                        <h1 class="highlight">Lorem ipsum</h1>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
+                    </div>
+            </article>
+    </section>
     <hr class="breaker">
+
+    <div>
+
+        <p id="2" class="highlighted">2</p><p>abc</p><p>abc</p><p>abc</p><p>abc</p><p>abc</p><p>abc</p><p>abc</p><p>abc</p><p>abc</p><p>abc</p><p>abc</p><p>abc</p><p>abc</p>
+        <p>abc</p><p>abc</p><p>abc</p><p>abc</p><p>abc</p><p>abc</p><p>abc</p><p>abc</p><p>abc</p><p>abc</p><p>abc</p><p>abc</p><p>abc</p><p>abc</p>
+        <hr class="breaker">
+
+        <p id="3" class="highlighted">3</p><p>abc</p><p>abc</p><p>abc</p><p>abc</p><p>abc</p><p>abc</p><p>abc</p><p>abc</p><p>abc</p><p>abc</p><p>abc</p><p>abc</p><p>abc</p>
+        <p>abc</p><p>abc</p><p>abc</p><p>abc</p><p>abc</p><p>abc</p><p>abc</p><p>abc</p><p>abc</p><p>abc</p><p>abc</p><p>abc</p><p>abc</p><p>abc</p>
+        <hr class="breaker">
+
+        <p id="4" class="highlighted">4</p><p>abc</p><p>abc</p><p>abc</p><p>abc</p><p>abc</p><p>abc</p><p>abc</p><p>abc</p><p>abc</p><p>abc</p><p>abc</p><p>abc</p><p>abc</p>
+        <p>abc</p><p>abc</p><p>abc</p><p>abc</p><p>abc</p><p>abc</p><p>abc</p><p>abc</p><p>abc</p><p>abc</p><p>abc</p><p>abc</p><p>abc</p><p>abc</p>
+        <hr class="breaker">
+    </div>
+
     <footer>
         <div class="footer-1">
             <a href="https://maisnerr.github.io/portfolio"><img src="sources/images/navbar/Logo.webp" alt="Logo"></a>
@@ -96,16 +146,17 @@
             
         </div>
         <div class="footer-3">
-
+            <a href="old/index.html" target="_blank" style="color: white; font-size: 2rem; margin: 20px 20px;">OLD WEB</a>
         </div>
-        
     </footer>
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-<script src="script.js"></script>
+<script src="sources/files/script.js"></script>
 <script>
 AOS.init({
     duration: 700,
     once: true,
+    delay: 0,
 });
+window.addEventListener('load', AOS.refresh);
 </script>
 </body>
