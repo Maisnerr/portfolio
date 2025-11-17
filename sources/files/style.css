@@ -328,7 +328,7 @@ main{
 }
 .project-container{
     width: 100%;
-    display: flex !important;
+    display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
@@ -339,6 +339,10 @@ main{
     border-radius: 10px;
     max-width: 330px;
     transition: 0.2s ease-in-out;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
 .project-window:hover{
     box-shadow: var(--theme-color) 0 0 22px;
@@ -348,25 +352,50 @@ main{
     width: 70%;
     margin: 15%;
 }
+.project-window h1{
+    font-size: clamp(1.3rem, 2vw, 1.5rem);
+    font-family: "Roboto";
+    font-weight: 400;
+    text-align: center;
+    margin-top: 1%;
+}
 .project-window p{
     font-size: clamp(1.1rem, 2vw, 1.5rem);
     font-family: "Roboto";
     text-align: start;
     margin: 5%;
     font-weight: 100;
+    max-width: 80%;
 }
-.project-window h1{
-    font-size: clamp(1rem, 2vw, 1.5rem);
-    font-family: "Roboto";
-    font-weight: 400;
-    text-align: center;
-    margin-top: 1%;
+.project-digit{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 20px;
+}
+.project-digit a{
+    width: 30px;
+    height: 30px;
+    background-color: transparent;
+    border: var(--theme-color) 3px solid;
+    border-radius: 50%;
+}
+.project-digit-selected{
+    width: 33px !important;
+    height: 33px !important;
+    background-color: var(--theme-color) !important;
+    border-radius: 50%;
+    box-shadow: var(--theme-color) 0 0 5px;
 }
 /* Mobile fixes*/
 @media (max-width: 768px) {
+    .project-seader{
+        margin-bottom: 70px;
+    }
     .project-window img{
-        width: 60%;
-        margin: 5% 20% 3% 20%;
+        width: 80%;
+        margin: 5% 10% 3% 10%;
     }
 }
 
