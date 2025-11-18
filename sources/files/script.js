@@ -1,27 +1,6 @@
 const SECRET_NAVBAR = document.getElementById("secret-navbar");
 let Secret_navbar_visible = false;
 
-const projects_digits = document.getElementById("project-digit");
-let selected_number = 1;
-const projects = {
-    1: {
-        head: "abc",
-        body: "123"
-    },
-    2: {
-        head: "bcd",
-        body: "234"
-    },
-    3: {
-        head: "cde",
-        body: "345"
-    },
-    4: {
-        head: "def",
-        body: "456"
-    }
-};
-
 // Enable(disable) Navbar menu on mobile 
 function switch_secret_navbar(){ 
     Secret_navbar_visible = !Secret_navbar_visible;
@@ -38,20 +17,44 @@ function switch_secret_navbar(){
     }
 }
 
-function test(){
-    console.log(selected_number);
-    console.log(projects[selected_number].head);
-    console.log(projects[selected_number].body);
+const projects_digits = document.getElementById("project-digit"); //getting the parent of all circles
+let selected_number = 1; //declaring variable needed to identify correct window
 
-    projects_digits.children[selected_number-1].classList.add("project-digit-selected");
-}
-function test1(number){
+projects_img = document.getElementById("projects-img");
+projects_h1 = document.getElementById("projects-h1");
+projects_p = document.getElementById("projects-p");
+
+const projects = { //all necessary data for projects
+    1: {
+        head: "Header numero uno",
+        body: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam"
+    },
+    2: {
+        head: "Header numero dos",
+        body: "quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit ea commodo consequat."
+    },
+    3: {
+        head: "Header numero tres",
+        body: "esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum"
+    },
+    4: {
+        head: "Header numero quatro",
+        body: "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore eaque ipsa"
+    }
+};
+
+// By with inputed number delete class from old circle, change variable and add class to new circle
+function select_window(number){
     projects_digits.children[selected_number-1].classList.remove("project-digit-selected");
     
-    selected_number = number;
-    test();
+    selected_number = Number(number);
+
+    projects_digits.children[selected_number-1].classList.add("project-digit-selected");
+    set_window()
 }
-function test2(number){
+
+//Go to right/left, adding(subtracting) number, changes class
+function add_window(number){
     projects_digits.children[selected_number-1].classList.remove("project-digit-selected");
 
     if(selected_number+Number(number)==5){
@@ -61,6 +64,16 @@ function test2(number){
     }
 
     selected_number += Number(number);
-    test();
+    projects_digits.children[selected_number-1].classList.add("project-digit-selected");
+
+    set_window()
 }
-console.log(selected_number);
+
+//todo:
+function set_window(){
+    console.log(selected_number);
+
+    projects_img.src = "sources/images/projects/"+selected_number.toString()+".webp";
+    projects_h1.innerHTML = projects[selected_number].head;
+    projects_p.innerHTML = projects[selected_number].body;
+}

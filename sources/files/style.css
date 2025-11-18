@@ -153,7 +153,8 @@ nav img:hover{
     justify-content: center;
     align-items: center;
     height: 100vh;
-    width: 100%;
+    max-width: 100%;
+    overflow: hidden;
 }
 .nav-menu a{
     color: white;
@@ -162,27 +163,36 @@ nav img:hover{
     text-decoration: underline;
     text-align: center;
     margin: 10px;
+    width: max-content;
+    white-space: normal;
+    overflow-wrap: break-word;
 }
 .nav-menu-darkness{
+    height: 100vh;
     position: fixed;
-    overflow-y: hidden;
-    height: 200%;
-    width: 100%;
-    left: 0;
-    right: 0;
+    inset: 0;
     z-index: 100;
     background-color: rgba(0,0,0,0.7);
     transition: opacity 0.3s linear;
+    overflow: hidden;
+}
+.nav-menu-darkness *{
+    max-width: 100%;
+    overflow: hidden;
+    box-sizing: border-box;
 }
 .nav-menu-darkness button{
-    width: 60px;
+    width: 80px;
     position: absolute;
-    top: 60px;
-    right: 60px;
+    top: 7rem;
+    right: 7rem;
     stroke: none;
     fill: white;
     background-color: transparent;
     border: none;
+}
+.nav-menu-darkness button svg{
+    max-width: 100%;
 }
 
 /* Start of top section */
@@ -334,6 +344,21 @@ main{
     align-items: center;
     gap: 3%;
 }
+.project-container button{
+    width: 25px;
+    background-color: transparent;
+    border: none;
+}
+.project-container button svg{
+    width: 90px;
+    fill: var(--theme-color);
+    position: relative;
+    right: 37px;
+    transition: ease-in-out 0.1s;
+}
+.project-container button svg:active{
+    transform: scale(0.8);
+}
 .project-window{
     border: var(--theme-color) 5px solid;
     border-radius: 10px;
@@ -343,6 +368,7 @@ main{
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    min-height: min-content;
 }
 .project-window:hover{
     box-shadow: var(--theme-color) 0 0 22px;
@@ -351,6 +377,7 @@ main{
 .project-window img{
     width: 70%;
     margin: 15%;
+    transition: 0.2s ease-in-out;
 }
 .project-window h1{
     font-size: clamp(1.3rem, 2vw, 1.5rem);
@@ -358,6 +385,7 @@ main{
     font-weight: 400;
     text-align: center;
     margin-top: 1%;
+    transition: 0.2s ease-in-out;
 }
 .project-window p{
     font-size: clamp(1.1rem, 2vw, 1.5rem);
@@ -365,7 +393,8 @@ main{
     text-align: start;
     margin: 5%;
     font-weight: 100;
-    max-width: 80%;
+    max-width: 90%;
+    transition: 0.2s ease-in-out;
 }
 .project-digit{
     display: flex;
@@ -375,17 +404,18 @@ main{
     margin-top: 20px;
 }
 .project-digit a{
-    width: 30px;
-    height: 30px;
+    width: 10px;
+    height: 10px;
     background-color: transparent;
     border: var(--theme-color) 3px solid;
     border-radius: 50%;
+    transition: ease-out 0.1s;
 }
 .project-digit-selected{
-    width: 33px !important;
-    height: 33px !important;
+    width: 20px !important;
+    height: 10px !important;
     background-color: var(--theme-color) !important;
-    border-radius: 50%;
+    border-radius: 10px !important;
     box-shadow: var(--theme-color) 0 0 5px;
 }
 /* Mobile fixes*/
@@ -393,9 +423,20 @@ main{
     .project-seader{
         margin-bottom: 70px;
     }
+    .project-window{
+        max-width: 280px;
+    }
     .project-window img{
-        width: 80%;
-        margin: 5% 10% 3% 10%;
+        width: 70%;
+        margin: 10%;
+        margin-bottom: 5%;
+    }
+    .project-window p{
+        max-width: 70%;
+    }
+    .project{
+        width: 100%;
+        padding: 0 0 5%;
     }
 }
 
