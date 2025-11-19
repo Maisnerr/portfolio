@@ -5,11 +5,12 @@ html, body {
     height: 100%;
     min-height: 100vh;
     background: radial-gradient(circle, var(--bg-color-2), var(--bg-color-1));
-    color: var(--default-color);
     background-attachment: fixed;
-    background-position: center;
-    background-size: 100% 100%;
+    color: var(--default-color);
     scroll-behavior: smooth;
+    max-width: 100vw;
+    box-sizing: border-box;
+    overflow-x: clip;
 }
 body::selection{
     color: black;
@@ -180,6 +181,7 @@ nav img:hover{
     max-width: 100%;
     overflow: hidden;
     box-sizing: border-box;
+
 }
 .nav-menu-darkness button{
     width: 80px;
@@ -424,7 +426,7 @@ main{
         margin-bottom: 70px;
     }
     .project-window{
-        max-width: 280px;
+        max-width: 260px;
     }
     .project-window img{
         width: 70%;
@@ -433,6 +435,7 @@ main{
     }
     .project-window p{
         max-width: 70%;
+        height: 173px;
     }
     .project{
         width: 100%;
@@ -456,6 +459,7 @@ main{
     background-color: var(--theme-color);
     border: none;
     margin: 0px;
+    overflow-x: hidden;
 }
 
 /* Footer */
@@ -467,6 +471,8 @@ footer{
     justify-content: center;
     text-align: center;
     flex-direction: column;
+    max-width: 100vw;
+    overflow: hidden;
 }
 .footer-1{
     height: clamp(80px, 10vw, 100px);
