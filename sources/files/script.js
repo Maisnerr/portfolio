@@ -71,9 +71,24 @@ function add_window(number){
 
 //todo:
 function set_window(){
-    console.log(selected_number);
-
     projects_img.src = "sources/images/projects/"+selected_number.toString()+".webp";
     projects_h1.innerHTML = projects[selected_number].head;
     projects_p.innerHTML = projects[selected_number].body;
+}
+
+let opened_p = 0;
+const faq_p = document.querySelectorAll("#faq-windows-container p"); //getting all paragraphs of all faqs
+// open(close) window of faq
+function window_faq(number){
+    if(opened_p != 0){
+        console.log("closing "+opened_p);
+        faq_p[opened_p-1].style.display = "none";
+    }
+
+    if(opened_p != number){
+        faq_p[number-1].style.display = "block";
+        opened_p = number;
+    }else{
+        opened_p = 0;
+    }
 }

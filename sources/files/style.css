@@ -40,6 +40,20 @@ body::selection{
     font-size: 3rem;
     text-align: center;
 }
+/* Basic stuff that every section uses */
+.sections-header{
+    font-size: 3rem;
+    font-family: "Roboto";
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 0;
+}
+.sections-seader{
+    font-size: 1.5rem;
+    font-family: "Roboto";
+    text-align: center;
+    margin: 10px 0 50px;
+}
 /* Elements hidden/shown when on mobile */
 @media (max-width: 768px) {
     #hidden-mobile{
@@ -186,8 +200,8 @@ nav img:hover{
 .nav-menu-darkness button{
     width: 80px;
     position: absolute;
-    top: 7rem;
-    right: 7rem;
+    top: 3rem;
+    right: 3rem;
     stroke: none;
     fill: white;
     background-color: transparent;
@@ -325,19 +339,6 @@ main{
     display: block;
     padding: 0 5% 5%;
 }
-.project-header{
-    font-size: 3rem;
-    font-family: "Roboto";
-    font-weight: 700;
-    text-align: center;
-    margin-bottom: 0;
-}
-.project-seader{
-    font-size: 1.5rem;
-    font-family: "Roboto";
-    text-align: center;
-    margin: 10px 0 50px;
-}
 .project-container{
     width: 100%;
     display: flex;
@@ -443,7 +444,122 @@ main{
     }
 }
 
+/* Below project section */
+.started{
+    padding: 5%;
+}
+.started-windows-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: max-content;
+    gap: 3%;
+}
+.started-window{
+    border: var(--theme-color) 5px solid;
+    border-radius: 10px;
+    width: 100%;
+    max-width: 330px;
+    transition: 0.2s ease-in-out;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    flex-direction: column;
+    min-height: min-content;
+    height: 500px;
+    margin-bottom: 25px;
+}
+.started-window:hover{
+    box-shadow: var(--theme-color) 0 0 22px;
+    transform: scale(1.05) translateY(-30px);
+}
+.started-window img{
+    max-width: 90%;
+    padding: 5%;
+}
+.started-window h1{
+    font-size: clamp(1.1rem, 2vw, 1.8rem);
+    font-family: "Roboto";
+    font-weight: 700;
+    text-align: center;
+    margin-top: 1%;
+    transition: 0.2s ease-in-out;
+}
+.started-window p{
+    font-size: clamp(0.9rem, 2vw, 1.5rem);
+    font-family: "Roboto";
+    text-align: start;
+    margin: 5%;
+    font-weight: 100;
+    max-width: 90%;
+    transition: 0.2s ease-in-out;
+}
+/* Mobile fixes*/
+@media (max-width: 768px) {
+    .started-window{
+        height: 100%;
+    }
+    .started-windows-container{
+        height: 200px;
+        justify-content: start;
+        height: 300px;
+    }
+    .started-window{
+        max-width: 85%;
+    }
+}
 
+
+
+
+.faq{
+    padding: 5%;
+    min-height: 550px;
+}
+.faq-windows-container{
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.faq-window{
+    position: relative;
+    background-color: white;
+    padding: 15px;
+    border-radius: 20px;
+    transition: ease-in-out 0.2s;
+}
+.faq-window:hover{
+    transform: scale(1.04);
+    background-color: azure;
+    cursor: pointer;
+}
+.faq-window h1{
+    font-size: 1.5rem;
+    color: var(--theme-color);
+    font-family: "Roboto";
+    margin: 0;
+}
+.faq-window p{
+    font-size: 1rem;
+    color: black;
+    font-family: "Roboto";
+    font-weight: 100;
+    margin: 0;
+    margin-top: 15px;
+    display: none;
+    transition: ease-in-out 0.2s;
+}
+.faq-window button{
+    position: absolute;
+    right: 15px;
+    top: 20px;
+}
+@media (max-width: 768px){
+    .faq{
+        height: 600px;
+    }
+}
 
 
 
