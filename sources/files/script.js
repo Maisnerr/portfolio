@@ -80,15 +80,20 @@ let opened_p = 0;
 const faq_p = document.querySelectorAll("#faq-windows-container p"); //getting all paragraphs of all faqs
 // open(close) window of faq
 function window_faq(number){
+    console.log("starting: " + number);
     if(opened_p != 0){
-        console.log("closing "+opened_p);
-        faq_p[opened_p-1].style.display = "none";
+        console.log("closing: "+ opened_p);
+        faq_p[opened_p-1].classList.toggle("show-p");
+        faq_p[opened_p-1].nextElementSibling.style.rotate = "180deg";
     }
 
     if(opened_p != number){
-        faq_p[number-1].style.display = "block";
+        console.log("opening: "+ number); 
+        faq_p[number-1].classList.toggle("show-p");
+        faq_p[number-1].nextElementSibling.style.rotate = "90deg";
         opened_p = number;
     }else{
         opened_p = 0;
     }
+    console.warn("new line");
 }
