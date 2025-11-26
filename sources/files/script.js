@@ -1,3 +1,8 @@
+if(sessionStorage.getItem("visited")!="ano"){
+    alert("DISCLAIMER: This website is still being made, meaning that most stuff will 99% change/be filled");
+}
+sessionStorage.setItem("visited", "ano");
+
 const SECRET_NAVBAR = document.getElementById("secret-navbar");
 let Secret_navbar_visible = false;
 

@@ -540,6 +540,9 @@ main{
     color: var(--theme-color);
     font-family: "Roboto";
     margin: 0;
+    height: 40px;
+    display: flex;
+    align-items: center;
 }
 .faq-window p{
     font-size: 1rem;
@@ -547,24 +550,25 @@ main{
     font-family: "Roboto";
     font-weight: 100;
     margin: 0;
-    margin-top: 15px;
+    margin-top: 0;
     margin-bottom: 0;
     opacity: 0;
     max-height: 0;
-    height: max-content;
     transition: ease-in-out 0.2s;
 }
 .show-p{
     opacity: 1 !important;
     max-height: 200 !important;
     margin-bottom: 3rem !important;
+    margin-top: 15px !important;
 }
-.faq-window img{
+.faq-window svg{
     position: absolute;
     top: 15px;
     right: 15px;
     rotate: 180deg;
     transition: ease-in-out 0.2s;
+    fill: var(--theme-color);
 }
 @media (max-width: 768px){
     .faq{
