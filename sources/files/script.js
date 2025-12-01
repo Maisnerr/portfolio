@@ -48,7 +48,7 @@ const projects = { //all necessary data for projects
     }
 };
 
-// By with inputed number delete class from old circle, change variable and add class to new circle
+// in the services tab with inputed number delete class from old circle, change variable and add class to new circle
 function select_window(number){
     projects_digits.children[selected_number-1].classList.remove("project-digit-selected");
     
@@ -58,7 +58,7 @@ function select_window(number){
     set_window()
 }
 
-//Go to right/left, adding(subtracting) number, changes class
+// in the services tab buttons to go right/left, adding(subtracting) number, changes class
 function add_window(number){
     projects_digits.children[selected_number-1].classList.remove("project-digit-selected");
 
@@ -74,7 +74,7 @@ function add_window(number){
     set_window()
 }
 
-//todo:
+// in the services tab sets the windows elements to its respectful content
 function set_window(){
     projects_img.src = "sources/images/projects/"+selected_number.toString()+".webp";
     projects_h1.innerHTML = projects[selected_number].head;
@@ -85,20 +85,16 @@ let opened_p = 0;
 const faq_p = document.querySelectorAll("#faq-windows-container p"); //getting all paragraphs of all faqs
 // open(close) window of faq
 function window_faq(number){
-    console.log("starting: " + number);
-    if(opened_p != 0){
-        console.log("closing: "+ opened_p);
+        if(opened_p != 0){
         faq_p[opened_p-1].classList.toggle("show-p");
         faq_p[opened_p-1].nextElementSibling.style.rotate = "180deg";
     }
 
     if(opened_p != number){
-        console.log("opening: "+ number); 
         faq_p[number-1].classList.toggle("show-p");
         faq_p[number-1].nextElementSibling.style.rotate = "90deg";
         opened_p = number;
     }else{
         opened_p = 0;
     }
-    console.warn("new line");
 }

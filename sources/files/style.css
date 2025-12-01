@@ -1,4 +1,5 @@
-/* */
+/* ========== BODY ========== */
+/* ... */
 html, body {
     margin: 0;
     padding: 0;
@@ -23,7 +24,8 @@ body::selection{
     --bg-color-2: #1a2a2d;
     --bg-color-3: #323131;
 }
-/* Highlighted text */
+/* ========== HIGHLIGHTS ========== */
+/* ... */
 .highlight{
     color: var(--theme-color);
     text-shadow: var(--theme-color) 0 0 10px;
@@ -40,7 +42,8 @@ body::selection{
     font-size: 3rem;
     text-align: center;
 }
-/* Basic stuff that every section uses */
+/* ========== SECTIONS ========== */
+/* ... */
 .sections-header{
     font-size: 3rem;
     font-family: "Roboto";
@@ -71,7 +74,8 @@ body::selection{
         display: none;
     }
 }
-/* Fonts for Light,Normal,Bold*/
+/* ========== FONTS ========== */
+/* ... */
 @font-face {
     font-family: "Roboto";
     src: url("../fonts/Roboto_SemiCondensed-Light.ttf") format("woff2");
@@ -88,7 +92,8 @@ body::selection{
     font-weight: 700;
 }
 
-/* NavBar */
+/* ========== NAVBAR ========== */
+/* ... */
 nav{
     min-height: 50px;
     display: flex;
@@ -211,7 +216,8 @@ nav img:hover{
     max-width: 100%;
 }
 
-/* Start of top section */
+/* ========== TOP ========== */
+/* ... */
 .top{
     padding: 2% 4% 0px 4%;
 }
@@ -332,14 +338,15 @@ main{
     }
 }
 
-/* Project div */
-.project{
+/* ========== SERVICES ========== */
+/* ... */
+.service{
     width: 90%;
     height: fit-content;
     display: block;
     padding: 0 5% 5%;
 }
-.project-container{
+.service-container{
     width: 100%;
     display: flex;
     flex-direction: row;
@@ -347,22 +354,22 @@ main{
     align-items: center;
     gap: 3%;
 }
-.project-container button{
+.service-container button{
     width: 25px;
     background-color: transparent;
     border: none;
 }
-.project-container button svg{
+.service-container button svg{
     width: 90px;
     fill: var(--theme-color);
     position: relative;
     right: 37px;
     transition: ease-in-out 0.1s;
 }
-.project-container button svg:active{
+.service-container button svg:active{
     transform: scale(0.8);
 }
-.project-window{
+.service-window{
     border: var(--theme-color) 5px solid;
     border-radius: 10px;
     max-width: 330px;
@@ -373,16 +380,16 @@ main{
     flex-direction: column;
     min-height: min-content;
 }
-.project-window:hover{
+.service-window:hover{
     box-shadow: var(--theme-color) 0 0 22px;
     transform: scale(1.05) translateY(-30px);
 }
-.project-window img{
+.service-window img{
     width: 70%;
     margin: 15%;
     transition: 0.2s ease-in-out;
 }
-.project-window h1{
+.service-window h1{
     font-size: clamp(1.3rem, 2vw, 1.5rem);
     font-family: "Roboto";
     font-weight: 400;
@@ -390,7 +397,7 @@ main{
     margin-top: 1%;
     transition: 0.2s ease-in-out;
 }
-.project-window p{
+.service-window p{
     font-size: clamp(1.1rem, 2vw, 1.5rem);
     font-family: "Roboto";
     text-align: start;
@@ -399,14 +406,14 @@ main{
     max-width: 90%;
     transition: 0.2s ease-in-out;
 }
-.project-digit{
+.service-digit{
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 10px;
     margin-top: 20px;
 }
-.project-digit a{
+.service-digit a{
     width: 10px;
     height: 10px;
     background-color: transparent;
@@ -414,7 +421,7 @@ main{
     border-radius: 50%;
     transition: ease-out 0.1s;
 }
-.project-digit-selected{
+.service-digit-selected{
     width: 20px !important;
     height: 10px !important;
     background-color: var(--theme-color) !important;
@@ -423,28 +430,29 @@ main{
 }
 /* Mobile fixes*/
 @media (max-width: 768px) {
-    .project-seader{
+    .service-seader{
         margin-bottom: 70px;
     }
-    .project-window{
+    .service-window{
         max-width: 260px;
     }
-    .project-window img{
+    .service-window img{
         width: 70%;
         margin: 10%;
         margin-bottom: 5%;
     }
-    .project-window p{
+    .service-window p{
         max-width: 70%;
         height: 173px;
     }
-    .project{
+    .service{
         width: 100%;
         padding: 0 0 5%;
     }
 }
 
-/* Below project section */
+/* ========== BELOW SERVICES ========== */
+/* ... */
 .started{
     padding: 5%;
 }
@@ -509,9 +517,51 @@ main{
     }
 }
 
-
-
-
+/* ========== PROJECTS ========== */
+/* ... */
+.projects{
+    padding: 0 10% 10% 10%;
+}
+.projects h1:first-of-type{
+    margin-bottom: 40px;
+}
+.projects-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 5%;
+    margin-bottom: 0;
+    gap: 45px;
+}
+.projects-container a{
+    text-decoration: none;
+}
+.projects-article{
+    width: max-content;
+    height: max-content;
+    border: var(--theme-color) 5px solid;
+    border-radius: 15px;
+    transition: ease-in-out 0.2s;
+}
+.projects-article:hover{
+    box-shadow: var(--theme-color) 0 0 22px;
+    transform: scale(1.05) translateY(-30px);
+}
+.projects-article img{
+    max-width: 250px;
+    border-radius: 10px 10px 0 0;
+    border-bottom: var(--theme-color) 5px solid;
+}
+.projects-article h1{
+    font-size: 250%;
+    font-family: "Roboto";
+    font-weight: 700;
+    text-align: center;
+    color: white;
+}
+/* ========== FAQ ========== */
+/* ... */
 .faq{
     padding: 5%;
     min-height: 550px;
@@ -553,12 +603,12 @@ main{
     margin-top: 0;
     margin-bottom: 0;
     opacity: 0;
-    max-height: 0;
+    height: 0;
     transition: ease-in-out 0.2s;
 }
 .show-p{
     opacity: 1 !important;
-    max-height: 200 !important;
+    height: 200 !important;
     margin-bottom: 3rem !important;
     margin-top: 15px !important;
 }
@@ -571,8 +621,8 @@ main{
     fill: var(--theme-color);
 }
 @media (max-width: 768px){
-    .faq{
-        height: 600px;
+    .show-p{
+        margin-bottom: 5rem !important;
     }
 }
 
@@ -593,7 +643,8 @@ main{
     overflow-x: hidden;
 }
 
-/* Footer */
+/* ========== FOOTER ========== */
+/* ... */
 footer{
     height: 50%;
     background-color: #252525;
